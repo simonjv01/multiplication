@@ -6,6 +6,6 @@ public interface ChallengeGeneratorService {
      * 
      */
 
-     Challenge randChallenge();
+     Challenge randomChallenge();
     
 }
