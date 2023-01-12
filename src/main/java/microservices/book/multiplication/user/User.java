@@ -10,6 +10,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 @AllArgsConstructor
 public class User {
-    private int id;
+
+    private Long id;
     private String alias;
 }
