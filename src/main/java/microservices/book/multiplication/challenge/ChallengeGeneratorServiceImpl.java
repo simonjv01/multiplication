@@ -8,10 +8,10 @@ import java.util.Random;
 @Service
 public class ChallengeGeneratorServiceImpl implements ChallengeGeneratorService {
 
-    private final static int MINIMUM_FACTOR = 11;
-    private final static int MAXIMUM_FACTOR = 100;
+    public final static int MINIMUM_FACTOR = 11;
+    public final static int MAXIMUM_FACTOR = 100;
 
-    private final Random random;
+    public final Random random;
 
     ChallengeGeneratorServiceImpl() {
         this.random = new Random();
@@ -21,7 +21,7 @@ public class ChallengeGeneratorServiceImpl implements ChallengeGeneratorService 
         this.random = random;
     }
 
-    private int next() {
+    public int next() {
         return random.nextInt(MAXIMUM_FACTOR - MINIMUM_FACTOR) + MINIMUM_FACTOR;
     }
 
