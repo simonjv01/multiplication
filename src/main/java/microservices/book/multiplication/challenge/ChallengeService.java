@@ -2,5 +2,13 @@ package microservices.book.multiplication.challenge;
 
 public interface ChallengeService {
 
-    ChallengeAttempt verifyAttempt(ChallengeAttemptDTO attemptDTO);
+    /**
+     * Verifies if an attempt coming from the presentation layer is correct or
+     * not.
+     * @return resultAttempt the resulting ChallengeAttempt object
+     *
+     */
+
+    ChallengeAttempt verifyAttempt(
+            ChallengeAttemptDTO resultAttempt);
 }

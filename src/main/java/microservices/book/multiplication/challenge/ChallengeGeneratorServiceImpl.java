@@ -14,6 +14,7 @@ public class ChallengeGeneratorServiceImpl implements ChallengeGeneratorService 
     public final Random random;
 
     ChallengeGeneratorServiceImpl() {
+
         this.random = new Random();
     }
 
@@ -22,11 +23,13 @@ public class ChallengeGeneratorServiceImpl implements ChallengeGeneratorService 
     }
 
     public int next() {
+
         return random.nextInt(MAXIMUM_FACTOR - MINIMUM_FACTOR) + MINIMUM_FACTOR;
     }
 
     @Override
     public Challenge randomChallenge() {
+
         return new Challenge(next(), next());
     }
     

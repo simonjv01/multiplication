@@ -22,7 +22,7 @@ public class ChallengeGeneratorServiceTest {
 
     public ChallengeGeneratorService challengeGeneratorService;
 
-    @Mock
+    @Spy
     public Random random;
 
     @BeforeEach
