@@ -1,6 +1,6 @@
 package microservices.book.multiplication.challenge;
 
-import jakarta.validation.Valid;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class ChallengeAttemptController {
 
     @PostMapping
     ResponseEntity<ChallengeAttempt> postResult(
-            @RequestBody @Valid ChallengeAttemptDTO challengeAttemptDTO) {
+            @RequestBody ChallengeAttemptDTO challengeAttemptDTO) {
         return ResponseEntity.ok(challengeService.verifyAttempt(challengeAttemptDTO));
     }
 
